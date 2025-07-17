@@ -8,3 +8,8 @@ Navigation 和Activity 概念不一样，在这里，android 提供的是一个�
 前进的传值，使用SafeArg 可以直接传值。 会退的传值。利用Fragment Result API 可以进行传值。 
 
 如果需要更复杂的协同，可以使用共享 ViewModel（目前Demo 中没有使用）
+
+Sample 展示了 first > second > third > forth > fifth 的Fragment 跳转
+可以在日志中看到 每一个Fragment 的生命周期。 在Fifth 中展示了直接退回third 和直接退回first 并且传值的方式。
+
+页面中我们也可以点击物理按键（返回）直接进行Fragment 栈的退回
