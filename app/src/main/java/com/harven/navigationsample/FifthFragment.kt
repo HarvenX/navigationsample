@@ -22,14 +22,14 @@ class FifthFragment : Fragment(R.layout.fifth_fragment) {
                 // putInt("some_int", 123)
             }
 
-            // 设置结果。第一个参数是 requestKey，必须与 Fragment B 中监听的 key 相同
+            // 设置结果。第一个参数是 requestKey，必须与 FirstFragment 中监听的 key 相同
             parentFragmentManager.setFragmentResult("toFirst", resultBundle)
 
             findNavController().popBackStack(R.id.firstFragment,true)
         }
 
         binding.btn2.setOnClickListener {
-            findNavController().popBackStack(R.id.thirdFragment, false)//false thirdFragment ，true 表示thirdFragment也一并退回
+            findNavController().popBackStack(R.id.thirdFragment, false)//false 表示thirdFragment 不会被退出，true 表示thirdFragment也一并退回
         }
 
     }
